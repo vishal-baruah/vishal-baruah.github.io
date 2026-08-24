@@ -550,3 +550,45 @@ html, body {
   z-index: 9999;
   pointer-events: none;
 }
+
+/* ---- Mobile Performance & Spacing Optimizations (60/120 FPS & Zero Text Bleed) ---- */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 1.15rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .section-header {
+    margin-bottom: var(--space-2xl);
+  }
+
+  .section-title {
+    font-size: clamp(1.85rem, 7vw, 2.5rem);
+    letter-spacing: -0.02em;
+  }
+
+  .section-subtitle {
+    font-size: var(--text-sm);
+    padding: 0 0.5rem;
+  }
+
+  .glass-card {
+    padding: 1.35rem 1.15rem;
+    border-radius: 22px;
+    word-break: break-word;
+  }
+
+  /* GPU-accelerated background blobs with reduced blur for stutter-free scrolling */
+  .glowBlob1, .glowBlob2, .glowBlob3 {
+    filter: blur(55px);
+    will-change: transform;
+    transform: translateZ(0);
+  }
+
+  .noise-overlay {
+    animation-duration: 0.6s;
+  }
+}
