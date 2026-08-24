@@ -137,5 +137,38 @@
 @media (max-width: 768px) {
   .grid {
     grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+
+  .content {
+    padding: 1.4rem 1.25rem;
+  }
+
+  .title {
+    font-size: var(--text-lg);
+  }
+
+  .imageWrapper {
+    height: 180px;
+  }
+
+  .filters {
+    gap: 0.4rem;
+    margin-bottom: var(--space-2xl);
+  }
+
+  .filterBtn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.7rem;
+  }
+
+  .links {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .links .btn {
+    width: 100%;
+    justify-content: center;
   }
 }

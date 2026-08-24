@@ -110,16 +110,17 @@
   gap: var(--space-sm);
 }
 
-/* Mobile responsive */
+/* Mobile responsive — iPhone Frosted Glass Timeline */
 @media (max-width: 768px) {
   .timeline::after {
-    left: 20px;
+    left: 16px;
   }
   
   .item {
     width: 100%;
-    padding-left: 50px;
+    padding-left: 36px;
     padding-right: 0;
+    margin-bottom: var(--space-xl);
   }
   
   .right {
@@ -128,6 +129,23 @@
   
   .left .dot, 
   .right .dot {
-    left: 12px;
+    left: 9px;
+    width: 14px;
+    height: 14px;
+    top: 24px;
+  }
+
+  .card {
+    padding: 1.25rem 1.1rem;
+    border-radius: 20px;
+  }
+
+  .role {
+    font-size: var(--text-lg);
+  }
+
+  .points li {
+    font-size: var(--text-sm);
+    padding-left: var(--space-md);
   }
 }
