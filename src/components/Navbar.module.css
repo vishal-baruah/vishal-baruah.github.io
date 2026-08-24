@@ -217,12 +217,13 @@
   padding: var(--space-xs);
 }
 
-/* Mobile Drawer (Strictly hidden on desktop and when closed) */
+/* Mobile Drawer — Complete iPhone Liquid Frosted Glass Sheet */
 .backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(6px);
+  background: rgba(3, 5, 12, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   z-index: var(--z-modal);
 }
 
@@ -230,20 +231,24 @@
   position: fixed;
   top: 0;
   right: 0;
-  width: 300px;
-  max-width: 85vw;
+  width: 320px;
+  max-width: 88vw;
   height: 100vh;
-  background: rgba(11, 16, 30, 0.96);
-  backdrop-filter: blur(40px);
-  border-left: 1px solid rgba(255, 255, 255, 0.15);
-  padding: 90px var(--space-xl) var(--space-xl);
+  background: rgba(8, 12, 24, 0.88);
+  backdrop-filter: blur(50px) saturate(220%);
+  -webkit-backdrop-filter: blur(50px) saturate(220%);
+  border-left: 1px solid rgba(255, 255, 255, 0.18);
+  border-top-left-radius: 32px;
+  border-bottom-left-radius: 32px;
+  padding: 85px var(--space-lg) var(--space-xl);
   transform: translateX(100%);
   visibility: hidden;
   pointer-events: none;
-  transition: transform var(--transition-base), visibility var(--transition-base);
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), visibility 0.35s ease;
   z-index: calc(var(--z-modal) + 1);
   display: flex;
   flex-direction: column;
+  box-shadow: -20px 0 60px rgba(0, 0, 0, 0.9), inset 1px 0 2px rgba(255, 255, 255, 0.35);
 }
 
 .drawerOpen {
@@ -255,23 +260,42 @@
 .drawerLinks {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
-  margin-bottom: var(--space-2xl);
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
   list-style: none;
 }
 
 .drawerLink {
-  font-size: var(--text-lg);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.9rem 1.25rem;
+  border-radius: var(--radius-md);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   font-family: var(--font-heading);
+  font-size: var(--text-base);
   font-weight: 600;
-  color: var(--text-secondary);
+  color: var(--text-primary);
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
-.drawerLink.active,
 .drawerLink:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
   color: var(--accent-cyan);
+}
+
+.drawerLink.active {
+  background: rgba(0, 240, 255, 0.12);
+  border-color: rgba(0, 240, 255, 0.4);
+  color: var(--accent-cyan);
+  box-shadow: 0 0 15px -3px var(--accent-cyan-glow);
+}
+
+.drawerLink:active {
+  transform: scale(0.98);
 }
 
 .mobileResumeGroup {
@@ -285,6 +309,11 @@
 .mobileResumeBtn {
   width: 100%;
   justify-content: center;
+  border-radius: var(--radius-full);
+}
+
+.mobileResumeBtn:active {
+  transform: scale(0.97);
 }
 
 @media (min-width: 768px) {
