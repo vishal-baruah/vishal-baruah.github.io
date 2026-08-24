@@ -30,6 +30,7 @@
   align-items: center;
   justify-content: space-between;
   height: 100%;
+  padding: 0 var(--space-md);
 }
 
 .logo {
@@ -40,6 +41,8 @@
   font-weight: 800;
   text-decoration: none;
   z-index: calc(var(--z-modal) + 2);
+  flex-shrink: 0;
+  margin-right: var(--space-xl);
 }
 
 .logoText {
@@ -68,8 +71,9 @@
 .desktopLinks {
   display: none;
   align-items: center;
-  gap: var(--space-xl);
+  gap: clamp(1.25rem, 2vw, 2.25rem);
   list-style: none;
+  margin: 0 auto;
 }
 
 .navLink {
