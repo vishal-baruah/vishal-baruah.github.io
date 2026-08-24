@@ -1,0 +1,133 @@
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Center line */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent-magenta) 0%, var(--accent-cyan) 50%, var(--accent-violet) 100%);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+  box-shadow: 0 0 12px var(--accent-cyan-glow);
+}
+
+.item {
+  padding: 10px 40px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+  margin-bottom: var(--space-2xl);
+}
+
+.item:last-child {
+  margin-bottom: 0;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  right: -8px;
+  background-color: #050508;
+  border: 2px solid var(--accent-cyan);
+  top: 32px;
+  border-radius: 50%;
+  z-index: 1;
+  box-shadow: 0 0 15px 2px var(--accent-cyan-glow);
+}
+
+.right .dot {
+  left: -8px;
+}
+
+.cardWrapper {
+  width: 100%;
+}
+
+.card {
+  padding: var(--space-xl);
+}
+
+.period {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--accent-cyan);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.role {
+  font-size: var(--text-xl);
+  margin-bottom: var(--space-xs);
+}
+
+.company {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--text-secondary);
+  font-weight: 500;
+  margin-bottom: var(--space-lg);
+}
+
+.points {
+  margin-bottom: var(--space-lg);
+}
+
+.points li {
+  position: relative;
+  padding-left: var(--space-lg);
+  margin-bottom: var(--space-sm);
+  color: var(--text-secondary);
+}
+
+.points li::before {
+  content: '→';
+  position: absolute;
+  left: 0;
+  color: var(--text-muted);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .timeline::after {
+    left: 20px;
+  }
+  
+  .item {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 0;
+  }
+  
+  .right {
+    left: 0;
+  }
+  
+  .left .dot, 
+  .right .dot {
+    left: 12px;
+  }
+}

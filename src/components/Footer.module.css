@@ -1,0 +1,130 @@
+.footer {
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-glass);
+  padding: var(--space-4xl) 0 var(--space-lg);
+  margin-top: var(--space-4xl);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4xl);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  font-family: var(--font-heading);
+  font-weight: 700;
+  margin-bottom: var(--space-md);
+}
+
+.logoText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, var(--accent-blue), var(--accent-cyan));
+  color: white;
+  border-radius: var(--radius-sm);
+  font-size: var(--text-sm);
+  letter-spacing: 1px;
+}
+
+.logoName {
+  font-size: var(--text-lg);
+  color: var(--text-primary);
+}
+
+.bio {
+  color: var(--text-secondary);
+  max-width: 300px;
+}
+
+.colTitle {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-md);
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+}
+
+.links a {
+  color: var(--text-secondary);
+  transition: color var(--transition-fast);
+}
+
+.links a:hover {
+  color: var(--accent-blue);
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--border-glass);
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.copyright {
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.madeWith {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: var(--text-sm);
+}
+
+.heart {
+  color: var(--accent-rose);
+}
+
+.backToTop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all var(--transition-base);
+}
+
+.backToTop:hover {
+  background: var(--bg-glass-hover);
+  border-color: var(--border-glass-hover);
+  color: var(--accent-blue);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
+  }
+  
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

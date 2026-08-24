@@ -1,0 +1,73 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3xl);
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-xl);
+}
+
+.icon {
+  color: var(--accent-cyan);
+}
+
+.columnHeader h3 {
+  font-size: var(--text-2xl);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.card {
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+}
+
+.period {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  color: var(--accent-blue);
+  margin-bottom: var(--space-sm);
+}
+
+.title {
+  font-size: var(--text-lg);
+  margin-bottom: var(--space-xs);
+}
+
+.institution {
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+}
+
+.grade {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  color: var(--accent-amber);
+  background: rgba(245, 158, 11, 0.1);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(245, 158, 11, 0.2);
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

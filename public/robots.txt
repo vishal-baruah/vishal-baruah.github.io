@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Specifically allow AI crawlers for citation
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://vishal-baruah.github.io/sitemap.xml
